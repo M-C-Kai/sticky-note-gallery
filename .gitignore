@@ -1,0 +1,17 @@
+node_modules/
+dist/
+dev-dist/
+.vite/
+.env
+.env.*
+!.env.example
+*.local
+*.log
+*.pem
+*.key
+*.p12
+*.jks
+*.keystore
+sts-creds*
+publish-params*
+.DS_Store

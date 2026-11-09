@@ -1,0 +1,113 @@
+:root {
+  --bg-primary: #f7f1e3;
+  --bg-elevated: #fffdf7;
+  --text-primary: #3d3626;
+  --text-muted: #8a7f66;
+  --accent: #e8b64c;
+  --accent-strong: #d9a032;
+  --danger: #c65d5d;
+  --shadow-sm: 0 2px 8px rgba(60, 50, 30, 0.1);
+  --shadow-md: 0 6px 20px rgba(60, 50, 30, 0.14);
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --font-ui: 'PingFang SC', 'Microsoft YaHei', system-ui, -apple-system, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-ui);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+}
+
+button {
+  font-family: var(--font-ui);
+  border: none;
+  cursor: pointer;
+  background: none;
+  touch-action: manipulation;
+}
+
+input,
+textarea {
+  font-family: var(--font-ui);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  touch-action: manipulation;
+}
+
+.app-shell {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 18px;
+  background: rgba(247, 241, 227, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(60, 50, 30, 0.08);
+  flex-shrink: 0;
+  z-index: 50;
+}
+
+.top-bar .title {
+  font-weight: 700;
+  font-size: 17px;
+  letter-spacing: 0.02em;
+}
+
+.top-bar .actions {
+  display: flex;
+  gap: 8px;
+}
+
+.icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  color: var(--text-primary);
+  transition: background 0.15s ease;
+}
+
+.icon-button:hover {
+  background: rgba(60, 50, 30, 0.08);
+}
+
+.icon-button.primary {
+  background: var(--accent);
+  color: #4a3a15;
+}
+
+.icon-button.primary:hover {
+  background: var(--accent-strong);
+}
+
+.page {
+  flex: 1;
+  min-height: 0;
+  position: relative;
+  overflow: hidden;
+}
